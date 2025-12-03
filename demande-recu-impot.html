@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Reçu d'Impôt - Mosquée Al Firdaws</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .form-page {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(13, 59, 102, 0.03) 0%, rgba(255, 165, 0, 0.03) 100%);
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(13, 59, 102, 0.15);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-header h1 {
+            color: #0D3B66;
+            font-family: 'Lora', serif;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .form-header p {
+            color: #6C757D;
+            font-size: 1.05rem;
+        }
+        
+        .form-header .charity-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0D3B66 0%, #1A237E 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        
+        .donation-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group label {
+            color: #0D3B66;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .form-group label .required {
+            color: #FFA500;
+            margin-left: 3px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 14px 18px;
+            border: 2px solid #E0E0E0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            transition: all 0.3s ease;
+            background: #F8F9FA;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0D3B66;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(13, 59, 102, 0.1);
+        }
+        
+        .form-group input:hover,
+        .form-group select:hover {
+            border-color: #FFA500;
+        }
+        
+        .form-notice {
+            background: rgba(255, 165, 0, 0.1);
+            border-left: 4px solid #FFA500;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #2C3E50;
+            margin: 20px 0;
+        }
+        
+        .form-notice i {
+            color: #FFA500;
+            margin-right: 8px;
+        }
+        
+        .info-box {
+            background: rgba(13, 59, 102, 0.05);
+            border-left: 4px solid #0D3B66;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .info-box h3 {
+            color: #0D3B66;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            color: #2C3E50;
+        }
+        
+        .info-box li {
+            margin-bottom: 8px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #FFA500 0%, #ff8c00 100%);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 165, 0, 0.3);
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(255, 165, 0, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .btn-home {
+            background: #0D3B66;
+            color: white;
+            box-shadow: 0 4px 15px rgba(13, 59, 102, 0.2);
+        }
+        
+        .btn-home:hover {
+            background: #1A237E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 59, 102, 0.3);
+        }
+        
+        .btn-donate-alt {
+            background: white;
+            color: #0D3B66;
+            border: 2px solid #0D3B66;
+        }
+        
+        .btn-donate-alt:hover {
+            background: #0D3B66;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 25px;
+            }
+            
+            .form-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <img src="https://page.gensparksite.com/v1/base64_upload/d68c2a81fa91a8f4a8f5a2106da1fda1" alt="Logo Mosquée Al Firdaws" class="logo-img">
+                <span class="logo-text">Mosquée Al Firdaws</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="inscription-ecole-arabe.html" class="nav-link">École d'Arabe</a></li>
+                <li><a href="index.html#don" class="nav-link">Faire un Don</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-page">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1><i class="fas fa-receipt"></i> Demande de Reçu d'Impôt</h1>
+                    <p>Remplissez ce formulaire pour recevoir votre reçu officiel pour fins d'impôt</p>
+                    <span class="charity-badge">
+                        <i class="fas fa-certificate"></i> Organisme de bienfaisance : 770133734 RR 0001
+                    </span>
+                </div>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-info-circle"></i> À propos de ce formulaire</h3>
+                    <ul>
+                        <li>Ce formulaire permet de <strong>demander un reçu d'impôt</strong> pour votre donation déjà effectuée</li>
+                        <li>Un reçu officiel vous sera envoyé par courriel dans un délai de <strong>7 à 30 jours</strong></li>
+                        <li>Le reçu est valide pour votre déclaration d'impôt au Canada</li>
+                        <li>Conservez ce reçu pour vos dossiers fiscaux</li>
+                    </ul>
+                </div>
+
+                <form class="donation-form" action="https://formspree.io/f/xpwkzdwb" method="POST">
+                    <!-- Nom et Prénom -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">
+                                Prénom <span class="required">*</span>
+                            </label>
+                            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nom">
+                                Nom <span class="required">*</span>
+                            </label>
+                            <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">
+                            Adresse email (pour recevoir le reçu) <span class="required">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                    </div>
+
+                    <!-- Date de donation -->
+                    <div class="form-group">
+                        <label for="date-donation">
+                            Date de la donation <span class="required">*</span>
+                        </label>
+                        <input type="date" id="date-donation" name="date-donation" required>
+                    </div>
+
+                    <!-- Montant -->
+                    <div class="form-group">
+                        <label for="montant">
+                            Montant de la donation (CAD) <span class="required">*</span>
+                        </label>
+                        <input type="number" id="montant" name="montant" min="1" step="0.01" required placeholder="Ex: 100.00">
+                    </div>
+
+                    <!-- Moyen de paiement -->
+                    <div class="form-group">
+                        <label for="moyen-paiement">
+                            Moyen de paiement utilisé <span class="required">*</span>
+                        </label>
+                        <select id="moyen-paiement" name="moyen-paiement" required>
+                            <option value="">-- Sélectionnez un moyen de paiement --</option>
+                            <option value="Carte de crédit">1. Carte de crédit</option>
+                            <option value="Carte de débit">2. Carte de débit</option>
+                            <option value="Comptant">3. Comptant</option>
+                            <option value="Chèque">4. Chèque</option>
+                            <option value="Interac">5. Interac</option>
+                        </select>
+                    </div>
+
+                    <!-- Notice -->
+                    <div class="form-notice">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <strong>Important :</strong> Ce formulaire est uniquement pour <strong>demander un reçu d'impôt</strong> suite à une donation déjà effectuée. Pour faire un nouveau don, veuillez utiliser les autres moyens de paiement disponibles.
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Demander mon reçu d'impôt
+                    </button>
+                </form>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <a href="index.html" class="action-btn btn-home">
+                        <i class="fas fa-home"></i> Retour à l'accueil
+                    </a>
+                    <a href="index.html#don" class="action-btn btn-donate-alt">
+                        <i class="fas fa-credit-card"></i> Faire un nouveau don
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mosquée Al Firdaws - Centre Communautaire de Terrebonne. Tous droits réservés.</p>
+                <p>Organisme de bienfaisance enregistré : <strong>770133734 RR 0001</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

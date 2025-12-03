@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mosquée Al Firdaws – Centre Culturel Musulman de Terrebonne. Un lieu de foi, d'éducation et de solidarité.">
+    <meta name="keywords" content="mosquée, Terrebonne, Al Firdaws, islam, prière, donation, communauté musulmane">
+    <title>Mosquée Al Firdaws – Centre Culturel Musulman de Terrebonne</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="langFr" class="lang-btn active" onclick="langManager.switchLanguage('fr')">FR</button>
+        <button id="langEn" class="lang-btn" onclick="langManager.switchLanguage('en')">EN</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <img src="https://page.gensparksite.com/v1/base64_upload/d68c2a81fa91a8f4a8f5a2106da1fda1" alt="Logo Mosquée Al Firdaws" class="logo-img">
+                <span class="logo-text" data-i18n="hero_title">Mosquée Al Firdaws</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#horaires" class="nav-link" data-i18n="nav_prayer_times">Horaires</a></li>
+                <li><a href="#don" class="nav-link" data-i18n="nav_donate">Faire un Don</a></li>
+                <li><a href="inscription-ecole-arabe.html" class="nav-link" data-i18n="nav_school">École d'Arabe</a></li>
+                <li><a href="demande-recu-impot.html" class="nav-link" data-i18n="nav_receipt">Reçu d'impôt</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero reveal">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero_title">Mosquée Al Firdaws</h1>
+                <h2 class="hero-subtitle" data-i18n="hero_subtitle">Centre Culturel Musulman de Terrebonne</h2>
+                <p class="hero-text" data-i18n="hero_text">Un lieu de foi, d'éducation et de solidarité au cœur de Terrebonne. La communauté musulmane de Terrebonne connaît une croissance rapide. Ensemble, construisons un espace permanent pour la prière, l'enseignement et les activités communautaires.</p>
+                <a href="#don" class="btn btn-primary btn-lg">
+                    <i class="fas fa-heart"></i> <span data-i18n="hero_cta">Faire un Don</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Horaires Section - MOVED TO FIRST POSITION -->
+    <section id="horaires" class="horaires reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="prayer_title">Horaires de prière - Terrebonne</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="horaires-content">
+                <!-- Prayer Times Widget Integration - MOONODE -->
+                <div class="prayer-widget-wrapper">
+                    <iframe class="prayer-iframe" 
+                            src="https://moonode.tv/glassy/DINSCREEN-621804-TERREBONNE-CANADA-6X14J1" 
+                            allowfullscreen="allowfullscreen">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projet Section -->
+    <section id="projet" class="projet reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="project_title">Notre projet : construire la Mosquée Al Firdaws</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="projet-content">
+                <div class="projet-intro" data-i18n="project_intro">
+                    <p>La communauté musulmane de Terrebonne connaît une croissance rapide. Chaque semaine, ce sont des centaines de fidèles qui se réunissent pour la prière, les enseignements religieux, et les activités sociales. Pourtant, nous ne disposons pas d'un lieu adapté et permanent pour nous rassembler dignement. C'est pour répondre à ce besoin urgent que le <strong>Centre Communautaire de Terrebonne</strong> a lancé le projet de construction de la <strong>Mosquée Al Firdaws</strong>.</p>
+                </div>
+
+                <div class="projet-grid">
+                    <div class="projet-card">
+                        <div class="card-icon">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <h3 data-i18n="project_card1_title">Un lieu de foi, d'éducation et de solidarité</h3>
+                        <ul class="projet-list">
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="project_card1_item1">La prière quotidienne et les grandes prières du vendredi</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="project_card1_item2">Les cours d'arabe et de Coran pour enfants et adultes</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="project_card1_item3">Les activités éducatives, sociales et familiales</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="project_card1_item4">L'accueil des visiteurs et la sensibilisation à l'islam</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="projet-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-i18n="project_card2_title">Une mobilisation communautaire</h3>
+                        <p data-i18n="project_card2_intro">Grâce à Allah et à votre générosité, nous avons déjà franchi des étapes importantes :</p>
+                        <ul class="projet-list">
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="project_card2_item1">L'acquisition d'un terrain de <strong>30 000 pieds carrés</strong></span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="project_card2_item2">L'obtention des autorisations légales pour un lieu de culte</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="project_card2_item3">La surface construite prévue est d'environ <strong>400 m²</strong></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="projet-card projet-card-highlight">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 data-i18n="project_card3_title">Objectif : 2 millions de dollars</h3>
+                        <p data-i18n="project_card3_text">Pour mener à bien ce projet, nous devons collecter un total de <strong class="highlight-amount">2 000 000 $</strong>. Chaque don, petit ou grand, est une pierre posée dans la construction de notre avenir commun.</p>
+                        <a href="#don" class="btn btn-secondary">
+                            <i class="fas fa-donate"></i> <span data-i18n="project_card3_cta">Contribuer maintenant</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Don Section -->
+    <section id="don" class="don reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="donate_title">Faites un don pour la Mosquée Al Firdaws</h2>
+                <p class="section-subtitle" data-i18n="donate_subtitle">Ne te prive pas de cette immense récompense – sois parmi les premiers à soutenir ce projet béni.</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="don-intro">
+                <p data-i18n="donate_intro">Nous levons des fonds pour construire la Mosquée Al Firdaws, un centre de foi, d'éducation et de solidarité pour toute la communauté musulmane de Terrebonne. Votre soutien permet de financer le projet de construction, les cours d'arabe et de Coran, et les activités communautaires.</p>
+                
+                <div class="don-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <p><strong data-i18n="donate_notice_1">Tous les dons sont non remboursables.</strong></p>
+                        <p><span data-i18n="donate_notice_2">Numéro d'organisme de bienfaisance :</span> <strong>770133734 RR 0001</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="don-grid">
+                <!-- GoFundMe -->
+                <div class="don-card">
+                    <div class="don-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 data-i18n="donate_gofundme_title">Campagne GoFundMe</h3>
+                    <p data-i18n="donate_gofundme_text">Participez à notre levée de fonds sur GoFundMe et partagez autour de vous.</p>
+                    <a href="https://www.gofundme.com/f/projet-mosquee-terrebonne-mosque-project" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="donate_gofundme_btn">Accéder à GoFundMe</span>
+                    </a>
+                </div>
+
+                <!-- Interac -->
+                <div class="don-card">
+                    <div class="don-icon">
+                        <i class="fas fa-money-bill-transfer"></i>
+                    </div>
+                    <h3 data-i18n="donate_interac_title">Virement Interac</h3>
+                    <p data-i18n="donate_interac_text">Envoyez votre don directement par virement Interac.</p>
+                    <div class="don-info">
+                        <p><strong><span data-i18n="donate_interac_email">Email :</span></strong> alfirdawsmasjid@gmail.com</p>
+                        <p class="info-note" data-i18n="donate_interac_note">Aucun mot de passe requis</p>
+                    </div>
+                </div>
+
+                <!-- PayPal -->
+                <div class="don-card">
+                    <div class="don-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <h3 data-i18n="donate_paypal_title">Don par Carte bancaire ou PayPal</h3>
+                    <p data-i18n="donate_paypal_text">Faites un don sécurisé via PayPal. Vous pouvez payer directement avec votre carte de crédit ou votre compte PayPal.</p>
+                    <a href="https://www.paypal.com/ncp/payment/6VX6XYSYEP4UG" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fab fa-paypal"></i> <span data-i18n="donate_paypal_btn">Faire un don via PayPal</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="contact_title">Contactez-nous</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 data-i18n="contact_subtitle">Pour toute question</h3>
+                    <p data-i18n="contact_text">Écrivez-nous à l'adresse suivante :</p>
+                    <a href="mailto:alfirdawsmasjid@gmail.com" class="contact-email">
+                        <i class="fas fa-paper-plane"></i> alfirdawsmasjid@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/d68c2a81fa91a8f4a8f5a2106da1fda1" alt="Logo" class="footer-logo">
+                    <h3 data-i18n="hero_title">Mosquée Al Firdaws</h3>
+                    <p data-i18n="hero_subtitle">Centre Culturel Musulman de Terrebonne</p>
+                    <p class="footer-charity">
+                        <i class="fas fa-certificate"></i>
+                        <span data-i18n="footer_charity">Organisme de bienfaisance enregistré</span><br>
+                        <strong>770133734 RR 0001</strong>
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer_quick_links">Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#accueil"><i class="fas fa-home"></i> <span data-i18n="nav_home">Accueil</span></a></li>
+                        <li><a href="#horaires"><i class="fas fa-clock"></i> <span data-i18n="nav_prayer_times">Horaires</span></a></li>
+                        <li><a href="#projet"><i class="fas fa-info-circle"></i> <span data-i18n="nav_project">Le Projet</span></a></li>
+                        <li><a href="#don"><i class="fas fa-heart"></i> <span data-i18n="nav_donate">Faire un Don</span></a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">Contact</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer_legal">Mentions légales</h4>
+                    <ul class="footer-links">
+                        <li><a href="avertissement-dons.html"><i class="fas fa-exclamation-triangle"></i> <span data-i18n="footer_link_warning">Avertissement sur les dons</span></a></li>
+                        <li><a href="conditions-utilisation.html"><i class="fas fa-file-contract"></i> <span data-i18n="footer_link_terms">Conditions d'utilisation</span></a></li>
+                        <li><a href="politique-confidentialite.html"><i class="fas fa-shield-alt"></i> <span data-i18n="footer_link_privacy">Politique de confidentialité</span></a></li>
+                        <li><a href="politique-cookies.html"><i class="fas fa-cookie-bite"></i> <span data-i18n="footer_link_cookies">Politique de cookies</span></a></li>
+                        <li><a href="recus-impot.html"><i class="fas fa-receipt"></i> <span data-i18n="footer_link_receipts">Reçus d'impôt</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-i18n="footer_contact_title">Contact</h4>
+                    <p><i class="fas fa-envelope"></i> alfirdawsmasjid@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_location">Terrebonne, Québec</span></p>
+                    <div class="social-links">
+                        <h4 data-i18n="footer_social">Suivez-nous</h4>
+                        <a href="https://www.facebook.com/MosqueeTerrebonne" target="_blank" rel="noopener noreferrer" class="social-link facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mosqueeterrebonne" target="_blank" rel="noopener noreferrer" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-i18n="footer_copyright">Mosquée Al Firdaws - Centre Communautaire de Terrebonne. Tous droits réservés.</span></p>
+                <p data-i18n="footer_blessing">Qu'Allah accepte vos efforts et vous récompense.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
